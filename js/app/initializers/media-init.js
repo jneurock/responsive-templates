@@ -19,24 +19,19 @@ Ember.Application.initializer({
           // Overrides
           init: function() {
 
-            var self = this;
-
             this._super();
 
-            this.check();
-
-            $(window).on('resize', function() {
-
-              Ember.run.debounce(self, 'check', 150);
-            });
+            this
+              .checkSize()
+              .setupResizeHandler();
           },
 
           // Methods
-          check: function() {
+          checkSize: function() {
 
             var width = $('body').width();
 
-            this.setProperties({
+            return this.setProperties({
               small: width <= 640,
               medium: width > 640 && width <= 1024,
               mediumUp: width > 640,
@@ -45,6 +40,16 @@ Ember.Application.initializer({
               xlarge: width > 1440 && width <= 1920,
               xlargeUp: width > 1440,
               xxlarge: width > 1920
+            });
+          },
+
+          setupResizeHandler: function() {
+
+            var self = this;
+
+            $(window).on('resize', function() {
+
+              Ember.run.debounce(self, 'checkSize', 150);
             });
           }
         });

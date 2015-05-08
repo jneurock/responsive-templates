@@ -32,8 +32,9 @@ App = Ember.Application.create();
 
 App.Router.map(function() {
   
-  this.route('media', function() {
+  this.route('content');
 
-    this.route('status');
-  });
+  this.route('layouts');
+
+  this.route('statuses');
 });

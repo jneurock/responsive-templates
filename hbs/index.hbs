@@ -1,4 +1,42 @@
-<p>
-  This demo is meant to show how easily you can setup responsive templates with
-  <a href="http://emberjs.com/">Ember.js</a>.
-</p>
+{{partial "header"}}
+
+<main class="row">
+  <div class="column">
+    <h1 class="h3">Welcome</h1>
+
+    <p>
+      This demo is meant to show how easily you can setup responsive templates with
+      <a href="http://emberjs.com/">Ember.js</a>. This is <em>not</em> intended to advocate for a
+      JavaScript-based approach over tried and true Responsive Web Design (RWD) techniques. The goal
+      of this demo is to give you another tool to put in your RWD belt.
+    </p>
+
+    <ul class="small-block-grid-1 medium-block-grid-3 text-center">
+      <li>
+        {{#link-to "statuses" class="block panel"}}
+          <span class="icon statuses h2"></span>
+          <br>
+          Media Statuses
+        {{/link-to}}
+      </li>
+
+      <li>
+        {{#link-to "layouts" class="block panel"}}
+          <span class="icon layouts h2"></span>
+          <br>
+          Layouts
+        {{/link-to}}
+      </li>
+
+      <li>
+        {{#link-to "content" class="block panel"}}
+          <span class="icon content h2"></span>
+          <br>
+          Content Swapping
+        {{/link-to}}
+      </li>
+    </ul>
+  </div>
+</main>
+
+{{partial "footer"}}

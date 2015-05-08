@@ -1,0 +1,41 @@
+.status-label {
+  display: inline-block;
+  font-size: rem-calc(14);
+  width: 4rem;
+}
+
+.status-table {
+  width: 100%;
+
+  tr {
+    .icon {
+      color: $iron;
+
+      &:before {
+        content: "\e605";
+      }
+    }
+
+    &.active {
+      font-weight: bold;
+
+      .icon {
+        color: $primary-color;
+        font-weight: normal;
+
+        &:before {
+          content: "\e604";
+        }
+      }
+    }
+
+    td,
+    th {
+      text-align: center;
+
+      &:first-child {
+        text-align: left;
+      }
+    }
+  }
+}
