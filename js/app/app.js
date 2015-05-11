@@ -30,6 +30,14 @@
  */
 
 /**
+ * Ember's Object class
+ *
+ * @name external:Ember.Object
+ * @class
+ * @see {@link http://emberjs.com/api/classes/Ember.Object.html}
+ */
+
+/**
  * The instance of Ember.Application used throughout the app
  *
  * @namespace
@@ -40,9 +48,9 @@ App = Ember.Application.create();
 
 App.Router.map(function() {
   
-  this.route('layouts');
-
   this.route('responsive-images');
 
   this.route('statuses');
+  
+  this.route('tricky-layout');
 });
