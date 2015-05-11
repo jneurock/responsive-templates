@@ -8,22 +8,47 @@ Ember.TEMPLATES["_footer"] = Ember.HTMLBars.template((function() {
     build: function build(dom) {
       var el0 = dom.createDocumentFragment();
       var el1 = dom.createElement("footer");
-      dom.setAttribute(el1,"class","row text-right");
       var el2 = dom.createTextNode("\n  ");
       dom.appendChild(el1, el2);
       var el2 = dom.createElement("div");
-      dom.setAttribute(el2,"class","column");
+      dom.setAttribute(el2,"class","row");
       var el3 = dom.createTextNode("\n    ");
       dom.appendChild(el2, el3);
-      var el3 = dom.createElement("p");
+      var el3 = dom.createElement("div");
+      dom.setAttribute(el3,"class","medium-11 columns");
       var el4 = dom.createTextNode("\n      ");
       dom.appendChild(el3, el4);
-      var el4 = dom.createElement("small");
-      var el5 = dom.createTextNode("\n        Visit me at ");
+      var el4 = dom.createElement("p");
+      var el5 = dom.createTextNode("\n        ");
       dom.appendChild(el4, el5);
-      var el5 = dom.createElement("a");
-      dom.setAttribute(el5,"href","http://vikingglory.com/");
-      var el6 = dom.createTextNode("vikingglory.com");
+      var el5 = dom.createElement("small");
+      var el6 = dom.createTextNode("\n          Use the right tool for the job. Always keep performance, scalability and maintainability in\n          mind when determining which RWD solution is right for your coding problem.\n        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("div");
+      dom.setAttribute(el3,"class","medium-3 columns text-right");
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("p");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("small");
+      var el6 = dom.createTextNode("\n          Visit me at ");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createElement("a");
+      dom.setAttribute(el6,"href","http://vikingglory.com/");
+      var el7 = dom.createTextNode("vikingglory.com");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode(".\n        ");
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n      ");
@@ -109,24 +134,26 @@ Ember.TEMPLATES["_header"] = Ember.HTMLBars.template((function() {
     build: function build(dom) {
       var el0 = dom.createDocumentFragment();
       var el1 = dom.createElement("header");
-      dom.setAttribute(el1,"class","row");
       var el2 = dom.createTextNode("\n  ");
       dom.appendChild(el1, el2);
       var el2 = dom.createElement("div");
-      dom.setAttribute(el2,"class","column");
+      dom.setAttribute(el2,"class","row");
       var el3 = dom.createTextNode("\n    ");
       dom.appendChild(el2, el3);
-      var el3 = dom.createElement("h1");
+      var el3 = dom.createElement("div");
+      dom.setAttribute(el3,"class","column");
       var el4 = dom.createTextNode("\n      ");
       dom.appendChild(el3, el4);
-      var el4 = dom.createComment("");
+      var el4 = dom.createElement("h1");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createComment("");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
       dom.appendChild(el3, el4);
       var el4 = dom.createTextNode("\n    ");
       dom.appendChild(el3, el4);
-      dom.appendChild(el2, el3);
-      var el3 = dom.createTextNode("\n\n    ");
-      dom.appendChild(el2, el3);
-      var el3 = dom.createElement("hr");
       dom.appendChild(el2, el3);
       var el3 = dom.createTextNode("\n  ");
       dom.appendChild(el2, el3);
@@ -156,7 +183,7 @@ Ember.TEMPLATES["_header"] = Ember.HTMLBars.template((function() {
       } else {
         fragment = this.build(dom);
       }
-      var morph0 = dom.createMorphAt(dom.childAt(fragment, [0, 1, 1]),1,1);
+      var morph0 = dom.createMorphAt(dom.childAt(fragment, [0, 1, 1, 1]),1,1);
       block(env, morph0, context, "link-to", ["index"], {}, child0, null);
       return fragment;
     }
@@ -394,6 +421,304 @@ Ember.TEMPLATES["index"] = Ember.HTMLBars.template((function() {
       }
     };
   }());
+  var child3 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("        small screen (640px wide or less).\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        return fragment;
+      }
+    };
+  }());
+  var child4 = (function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        revision: "Ember@1.11.3",
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("        medium screen (more than 640px wide but no more than 1024px wide).\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        revision: "Ember@1.11.3",
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("        large screen or up (more than 1024px wide).\n      ");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
+        block(env, morph0, context, "if", [get(env, context, "media.medium")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }());
+  var child5 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("            small screen (640px wide or less).\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        return fragment;
+      }
+    };
+  }());
+  var child6 = (function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        revision: "Ember@1.11.3",
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("            medium screen (more than 640px wide but no more than 1024px).\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        revision: "Ember@1.11.3",
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("            large screen or up (more than 1024px wide).\n        ");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
+        block(env, morph0, context, "if", [get(env, context, "media.medium")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }());
   return {
     isHTMLBars: true,
     revision: "Ember@1.11.3",
@@ -475,6 +800,103 @@ Ember.TEMPLATES["index"] = Ember.HTMLBars.template((function() {
       var el4 = dom.createTextNode("\n    ");
       dom.appendChild(el3, el4);
       dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("p");
+      var el4 = dom.createTextNode("\n      The code for this demo is available here:\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("a");
+      dom.setAttribute(el4,"href","https://github.com/jneurock/responsive-templates");
+      var el5 = dom.createTextNode("https://github.com/jneurock/responsive-templates");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode(".\n      The demo code is meant to be concise and is ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("em");
+      var el5 = dom.createTextNode("not");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode(" how anyone would ideally code\n      a project. Feel free to copy and paste from the demo code but keep in mind that most if it is\n      not very testable and is quite fragile.\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("hr");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("p");
+      var el4 = dom.createTextNode("\n      The concept here is simple: Ember makes it easy to inject an object into controllers\n      (exposing it to the view layer) that keeps track of media queries. Since properties of this\n      object can be accessed in the templates, conditional logic can be added very easily.\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("h5");
+      var el4 = dom.createTextNode("For example:");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("p");
+      var el4 = dom.createTextNode("\n      You are viewing this site on a\n");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createComment("");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("span");
+      dom.setAttribute(el3,"class","label secondary");
+      var el4 = dom.createTextNode("Handlebars");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("code");
+      dom.setAttribute(el3,"class","code-block");
+      var el4 = dom.createElement("pre");
+      var el5 = dom.createTextNode("\n<p>\n  You are viewing this site on a\n  {{#if media.small}}\n    small screen (640px wide or less).\n  {{else if media.medium}}\n    medium screen (more than 640px wide but no more than 1024px).\n  {{else}}\n    large screen or up (more than 1024px wide).\n  {{/if}}\n</p>\n\n");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("span");
+      dom.setAttribute(el3,"class","label secondary");
+      var el4 = dom.createTextNode("Rendered HTML");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("code");
+      dom.setAttribute(el3,"class","code-block");
+      var el4 = dom.createTextNode("\n      <p>\n        ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("br");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n         \n        You are viewing this site on a\n        ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("br");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createComment("");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("        ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("br");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n      </p>\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("p");
+      var el4 = dom.createTextNode("\n      This isn't a very good example but it has large implications. For one, instead of rendering three\n      different paragraphs, and showing/hiding them with CSS, only one paragraph is actually rendered.\n      Another advantage is the ability to use conditional logic inline, i.e., at a more granular\n      level than media queries with CSS can get.\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
       var el3 = dom.createTextNode("\n  ");
       dom.appendChild(el2, el3);
       dom.appendChild(el1, el2);
@@ -489,7 +911,7 @@ Ember.TEMPLATES["index"] = Ember.HTMLBars.template((function() {
     },
     render: function render(context, env, contextualElement) {
       var dom = env.dom;
-      var hooks = env.hooks, inline = hooks.inline, block = hooks.block;
+      var hooks = env.hooks, inline = hooks.inline, block = hooks.block, get = hooks.get;
       dom.detectNamespace(contextualElement);
       var fragment;
       if (env.useFragmentCache && dom.canClone) {
@@ -507,19 +929,24 @@ Ember.TEMPLATES["index"] = Ember.HTMLBars.template((function() {
       } else {
         fragment = this.build(dom);
       }
-      var element0 = dom.childAt(fragment, [2, 1, 5]);
+      var element0 = dom.childAt(fragment, [2, 1]);
+      var element1 = dom.childAt(element0, [5]);
       var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
-      var morph1 = dom.createMorphAt(dom.childAt(element0, [1]),1,1);
-      var morph2 = dom.createMorphAt(dom.childAt(element0, [3]),1,1);
-      var morph3 = dom.createMorphAt(dom.childAt(element0, [5]),1,1);
-      var morph4 = dom.createMorphAt(fragment,4,4,contextualElement);
+      var morph1 = dom.createMorphAt(dom.childAt(element1, [1]),1,1);
+      var morph2 = dom.createMorphAt(dom.childAt(element1, [3]),1,1);
+      var morph3 = dom.createMorphAt(dom.childAt(element1, [5]),1,1);
+      var morph4 = dom.createMorphAt(dom.childAt(element0, [15]),1,1);
+      var morph5 = dom.createMorphAt(dom.childAt(element0, [23]),5,5);
+      var morph6 = dom.createMorphAt(fragment,4,4,contextualElement);
       dom.insertBoundary(fragment, null);
       dom.insertBoundary(fragment, 0);
       inline(env, morph0, context, "partial", ["header"], {});
       block(env, morph1, context, "link-to", ["statuses"], {"class": "block panel"}, child0, null);
       block(env, morph2, context, "link-to", ["layouts"], {"class": "block panel"}, child1, null);
       block(env, morph3, context, "link-to", ["responsive-images"], {"class": "block panel"}, child2, null);
-      inline(env, morph4, context, "partial", ["footer"], {});
+      block(env, morph4, context, "if", [get(env, context, "media.small")], {}, child3, child4);
+      block(env, morph5, context, "if", [get(env, context, "media.small")], {}, child5, child6);
+      inline(env, morph6, context, "partial", ["footer"], {});
       return fragment;
     }
   };
@@ -651,7 +1078,7 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
         dom.appendChild(el0, el1);
         var el1 = dom.createElement("img");
         dom.setAttribute(el1,"width","100");
-        dom.setAttribute(el1,"alt","logo");
+        dom.setAttribute(el1,"alt","Logo");
         dom.appendChild(el0, el1);
         var el1 = dom.createTextNode("\n");
         dom.appendChild(el0, el1);
@@ -698,7 +1125,7 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
           dom.appendChild(el0, el1);
           var el1 = dom.createElement("img");
           dom.setAttribute(el1,"width","200");
-          dom.setAttribute(el1,"alt","logo");
+          dom.setAttribute(el1,"alt","Logo");
           dom.appendChild(el0, el1);
           var el1 = dom.createTextNode("\n");
           dom.appendChild(el0, el1);
@@ -951,7 +1378,7 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       var el5 = dom.createElement("code");
       dom.setAttribute(el5,"class","code-block");
       var el6 = dom.createElement("pre");
-      var el7 = dom.createTextNode("\n{{#if media.small}}\n  <img src=\"img/logo-small{{if media.retina '-2x' ''}}.png\" width=\"100\" alt=\"logo\">\n{{else if media.medium}}\n  <img src=\"img/logo-medium{{if media.retina '-2x' ''}}.png\" width=\"200\" alt=\"logo\">\n{{else}}\n  <img src=\"img/logo{{if media.retina '-2x' ''}}.png\" width=\"300\" alt=\"Logo\">\n{{/if}}\n\n");
+      var el7 = dom.createTextNode("\n{{#if media.small}}\n  <img src=\"img/logo-small{{if media.retina '-2x' ''}}.png\" width=\"100\" alt=\"Logo\">\n{{else if media.medium}}\n  <img src=\"img/logo-medium{{if media.retina '-2x' ''}}.png\" width=\"200\" alt=\"Logo\">\n{{else}}\n  <img src=\"img/logo{{if media.retina '-2x' ''}}.png\" width=\"300\" alt=\"Logo\">\n{{/if}}\n\n");
       dom.appendChild(el6, el7);
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
@@ -1609,6 +2036,10 @@ Ember.TEMPLATES["statuses"] = Ember.HTMLBars.template((function() {
       dom.appendChild(el5, el6);
       var el6 = dom.createTextNode("\n        ");
       dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("hr");
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n\n        ");
       dom.appendChild(el4, el5);

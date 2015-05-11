@@ -1,6 +1,9 @@
+code {
+  font-size: rem-calc(14);
+}
+
 .code-block {
   display: block;
-  font-size: rem-calc(14);
   margin-bottom: $paragraph-margin-bottom;
   overflow-x: auto;
 }

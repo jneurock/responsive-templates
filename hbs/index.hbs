@@ -36,6 +36,75 @@
         {{/link-to}}
       </li>
     </ul>
+
+    <p>
+      The code for this demo is available here:
+      <a href="https://github.com/jneurock/responsive-templates">https://github.com/jneurock/responsive-templates</a>.
+      The demo code is meant to be concise and is <em>not</em> how anyone would ideally code
+      a project. Feel free to copy and paste from the demo code but keep in mind that most if it is
+      not very testable and is quite fragile.
+    </p>
+
+    <hr>
+
+    <p>
+      The concept here is simple: Ember makes it easy to inject an object into controllers
+      (exposing it to the view layer) that keeps track of media queries. Since properties of this
+      object can be accessed in the templates, conditional logic can be added very easily.
+    </p>
+
+    <h5>For example:</h5>
+
+    <p>
+      You are viewing this site on a
+      {{#if media.small}}
+        small screen (640px wide or less).
+      {{else if media.medium}}
+        medium screen (more than 640px wide but no more than 1024px wide).
+      {{else}}
+        large screen or up (more than 1024px wide).
+      {{/if}}
+    </p>
+
+    <span class="label secondary">Handlebars</span>
+<code class="code-block"><pre>
+&lt;p&gt;
+  You are viewing this site on a
+  &#123;&#123;#if media.small&#125;&#125;
+    small screen (640px wide or less).
+  &#123;&#123;else if media.medium&#125;&#125;
+    medium screen (more than 640px wide but no more than 1024px).
+  &#123;&#123;else&#125;&#125;
+    large screen or up (more than 1024px wide).
+  &#123;&#123;/if&#125;&#125;
+&lt;/p&gt;
+
+</pre></code>
+
+    <span class="label secondary">Rendered HTML</span>
+    <code class="code-block">
+      &lt;p&gt;
+        <br>
+        &nbsp;
+        You are viewing this site on a
+        <br>
+        {{#if media.small}}
+          &nbsp; small screen (640px wide or less).
+        {{else if media.medium}}
+          &nbsp; medium screen (more than 640px wide but no more than 1024px).
+        {{else}}
+          &nbsp; large screen or up (more than 1024px wide).
+        {{/if}}
+        <br>
+      &lt;/p&gt;
+    </code>
+
+    <p>
+      This isn't a very good example but it has large implications. For one, instead of rendering three
+      different paragraphs, and showing/hiding them with CSS, only one paragraph is actually rendered.
+      Another advantage is the ability to use conditional logic inline, i.e., at a more granular
+      level than media queries with CSS can get.
+    </p>
   </div>
 </main>
 
