@@ -22,6 +22,14 @@
  */
 
 /**
+ * Ember's Component class
+ *
+ * @name external:Ember.Component
+ * @class
+ * @see {@link http://emberjs.com/api/classes/Ember.Component.html}
+ */
+
+/**
  * The instance of Ember.Application used throughout the app
  *
  * @namespace
@@ -32,9 +40,9 @@ App = Ember.Application.create();
 
 App.Router.map(function() {
   
-  this.route('content');
-
   this.route('layouts');
+
+  this.route('responsive-images');
 
   this.route('statuses');
 });

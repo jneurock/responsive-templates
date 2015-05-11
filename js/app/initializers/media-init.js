@@ -6,7 +6,7 @@ Ember.Application.initializer({
   initialize: function(container, application) {
 
     var Media = Ember.Object.extend({
-          // Properties
+          // Foundation-based properties
           small: false,
           medium: false,
           mediumUp: false,
@@ -15,6 +15,12 @@ Ember.Application.initializer({
           xlarge: false,
           xlargeUp: false,
           xxlarge: false,
+
+          // Modernizr-based properties
+          landscape: true,
+          portrait: false,
+          retina: false,
+          touch: false,
 
           // Overrides
           init: function() {
@@ -29,7 +35,20 @@ Ember.Application.initializer({
           // Methods
           checkSize: function() {
 
-            var width = $('body').width();
+            var landscape = true,
+                width = $('body').width();
+
+            if (window.Modernizr) {
+
+              landscape = !Modernizr.mq('(orientation:portrait)');
+
+              this.setProperties({
+                landscape: landscape,
+                portrait: !landscape,
+                retina: Modernizr.mq('(-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)'),
+                touch: Modernizr.touch
+              });
+            }
 
             return this.setProperties({
               small: width <= 640,

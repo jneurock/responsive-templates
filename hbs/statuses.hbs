@@ -11,13 +11,20 @@
         <h1 class="h3">Media Statuses</h1>
 
         <p>
+          The following tables show the statuses of different media queries. See more about how
+          this is done by taking a look at the application initializer<sup>1</sup> in
+          <a href="https://github.com/jneurock/responsive-templates/blob/master/js/app/initializers/media-init.js">
+            js/app/initializers/media-init.js</a>.
+        </p>
+
+        <p>
           The table below shows the status of media queries built into
           <a href="http://foundation.zurb.com/docs/media-queries.html">Foundation</a>.
         </p>
 
         <table class="status-table">
           <thead>
-            <tr class="{{if media.small 'active'}}">
+            <tr>
               <th>Name</th>
               <th>Range Low</th>
               <th>Range High</th>
@@ -99,6 +106,59 @@
             </tr>
           </tbody>
         </table>
+
+        <p>
+          The table below shows some additional media statuses that can be gathered via
+          <a href="https://modernizr.com/">Modernizr</a>.
+        </p>
+
+        <table class="status-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Active</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr class="{{if media.landscape 'active'}}">
+              <td>Landscape</td>
+              <td>
+                <span class="icon h3"></span>
+              </td>
+            </tr>
+
+            <tr class="{{if media.portrait 'active'}}">
+              <td>Potrait</td>
+              <td>
+                <span class="icon h3"></span>
+              </td>
+            </tr>
+
+            <tr class="{{if media.retina 'active'}}">
+              <td>Retina</td>
+              <td>
+                <span class="icon h3"></span>
+              </td>
+            </tr>
+
+            <tr class="{{if media.touch 'active'}}">
+              <td>Touch enabled</td>
+              <td>
+                <span class="icon h3"></span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h5>References</h5>
+
+        <p>
+          <sup>1</sup>
+          <a href="http://guides.emberjs.com/v1.10.0/understanding-ember/dependency-injection-and-service-lookup/#toc_dependency-management-in-ember-js">
+            Dependency Management in Ember.js
+          </a>
+        </p>
       </div>
     </section>
   </div>
