@@ -1,0 +1,35 @@
+<div class="row tricky-code">
+  <div class="column">
+    <span class="label secondary">Handlebars</span>
+<code class="code-block"><pre>
+&#123;&#123;#if media.largeUp}}
+  &lt;div class="large-4 columns tricky-layout-sidebar"&gt;
+    &#123;&#123;partial "tricky-layout/blog-title"}}
+  &lt;/div&gt;
+&#123;&#123;/if}}
+
+&lt;div class="&#123;&#123;if media.largeUp 'large-12'&#125;&#125; columns tricky-layout-main"&gt;
+  &lt;div class="row collapse"&gt;
+    &lt;div class="column"&gt;
+      &#123;&#123;partial "tricky-layout/ad"&#125;&#125;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &#123;&#123;#unless media.largeUp&#125;&#125;
+    &lt;div class="row collapse"&gt;
+      &lt;div class="column"&gt;
+        &#123;&#123;partial "tricky-layout/blog-title"&#125;&#125;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &#123;&#123;/unless&#125;&#125;
+
+  &#123;&#123;#each model as |post|&#125;&#125;
+    &#123;&#123;partial "tricky-layout/post"&#125;&#125;
+  &#123;&#123;/each&#125;&#125;
+
+  &#123;&#123;partial "footer"&#125;&#125;
+&lt;/div&gt;
+
+</pre></code>
+  </div>
+</div>

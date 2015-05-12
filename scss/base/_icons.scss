@@ -44,4 +44,12 @@
   &.off:before {
     content: "\e605";
   }
+
+  &.code:before {
+    content: "\e606";
+  }
+
+  &.code-close:before {
+    content: "\e607";
+  }
 }

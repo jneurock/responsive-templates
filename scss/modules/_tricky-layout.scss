@@ -40,16 +40,21 @@
   padding-bottom: 1rem;
 }
 
-.tricky-home-link {
-  background-color: #f96b51;
-  color: $white;
-  display: block;
-  padding: 0.75rem 1rem;
+.tricky-code {
+  padding: 1rem 0;
+}
 
-  &:hover {
-    background-color: scale-color(#f96b51, $lightness: $button-function-factor);
-    color: $white;
-  }
+.tricky-code-link {
+  border-top: 1px solid $gainsboro;
+}
+
+.tricky-layout-sidebar {
+  background: $tuatara;
+  height: 100%;
+  padding: 6rem 0 0;
+  position: fixed;
+  text-align: right;
+  width: $row-width / 4;
 }
 
 .tricky-post {
@@ -65,10 +70,34 @@
   font-family: $font-family-serif;
 }
 
+.tricky-top-link {
+  background-color: #f96b51;
+  color: $white;
+  display: block;
+  padding: 0.75rem 1rem;
+
+  &:hover {
+    background-color: scale-color(#f96b51, $lightness: $button-function-factor);
+    color: $white;
+  }
+}
+
 @media #{$medium-up} {
+  .tricky-code {
+    padding: 5rem 0 1rem;
+  }
+
+  .tricky-code-link {
+    border-top: none;
+    margin-left: 5rem;
+  }
+
   .tricky-home-link {
-    border-radius: 50%;
     margin-left: 1rem;
+  }
+
+  .tricky-top-link {
+    border-radius: 50%;
     position: absolute;
     top: 1rem;
     z-index: 1;
@@ -76,7 +105,13 @@
 }
 
 @media #{$large-up} {
-  .tricky-home-link {
+  .tricky-top-link {
     position: fixed;
+  }
+
+  .tricky-top-absolute {
+    .tricky-top-link {
+      position: absolute;
+    }
   }
 }

@@ -1,33 +1,49 @@
 <main class="row collapse">
-  {{#link-to "index" class="tricky-home-link text-center" title="Back to home page"}}
-    <span class="icon back"></span>
-  {{/link-to}}
-      
-  {{#if media.largeUp}}
-    <div class="large-4 columns tricky-layout-sidebar">
-      {{partial "tricky-layout/blog-title"}}
-    </div>
-  {{/if}}
+  <div class="tricky-top-links {{if showCode 'tricky-top-absolute'}}">
+    {{#link-to "index" class="tricky-top-link tricky-home-link" title="Back to home page"}}
+      <span class="icon back"></span>
+      <span class="right">
+        {{#if media.small}} Back to home page{{/if}}
+      </span>
+    {{/link-to}}
 
-  <div class="{{if media.largeUp 'large-12' ''}} columns">
-    <div class="row collapse">
-      <div class="column">
-        {{partial "tricky-layout/ad"}}
+    <a {{action "toggleCode"}} class="tricky-top-link tricky-code-link" title="{{if showCode 'Hide' 'Show'}} the code">
+      <span class="icon {{if showCode 'code-close' 'code'}}"></span>
+      <span class="right">
+        {{#if media.small}}{{if showCode 'Hide' 'Show'}} the code{{/if}}
+      </span>
+    </a>
+  </div>
+
+  {{#if showCode}}
+    {{partial "tricky-layout/code"}}
+  {{else}}
+    {{#if media.largeUp}}
+      <div class="large-4 columns tricky-layout-sidebar">
+        {{partial "tricky-layout/blog-title"}}
       </div>
-    </div>
+    {{/if}}
 
-    {{#unless media.largeUp}}
+    <div class="{{if media.largeUp 'large-12'}} columns tricky-layout-main">
       <div class="row collapse">
         <div class="column">
-          {{partial "tricky-layout/blog-title"}}
+          {{partial "tricky-layout/ad"}}
         </div>
       </div>
-    {{/unless}}
 
-    {{#each model as |post|}}
-      {{partial "tricky-layout/post"}}
-    {{/each}}
+      {{#unless media.largeUp}}
+        <div class="row collapse">
+          <div class="column">
+            {{partial "tricky-layout/blog-title"}}
+          </div>
+        </div>
+      {{/unless}}
 
-    {{partial "footer"}}
-  </div>
+      {{#each model as |post|}}
+        {{partial "tricky-layout/post"}}
+      {{/each}}
+
+      {{partial "footer"}}
+    </div>
+  {{/if}}
 </main>

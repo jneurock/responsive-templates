@@ -22,6 +22,14 @@
  */
 
 /**
+ * Ember's Controller class
+ *
+ * @name external:Ember.Controller
+ * @class
+ * @see {@link http://emberjs.com/api/classes/Ember.Controller.html}
+ */
+
+/**
  * Ember's Component class
  *
  * @name external:Ember.Component
