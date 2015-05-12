@@ -1,6 +1,6 @@
 # Simple Responsive Templates Demo
 
-[View the demo](http://vikingglory.com/rwd-templates)
+<a class="btn" href="http://vikingglory.com/rwd-templates">View the demo</a>
 
 ## Running the demo locally
 
