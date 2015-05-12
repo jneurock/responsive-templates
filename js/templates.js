@@ -1131,6 +1131,176 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       }
     };
   }());
+  var child2 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("<img src=\"img/logo-small");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode(".png\" width=\"100\" alt=\"Logo\">\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, inline = hooks.inline;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+        inline(env, morph0, context, "if", [get(env, context, "media.retina"), "-2x", ""], {});
+        return fragment;
+      }
+    };
+  }());
+  var child3 = (function() {
+    var child0 = (function() {
+      return {
+        isHTMLBars: true,
+        revision: "Ember@1.11.3",
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("<img src=\"img/logo-medium");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode(".png\" width=\"200\" alt=\"Logo\">\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          inline(env, morph0, context, "if", [get(env, context, "media.retina"), "-2x", ""], {});
+          return fragment;
+        }
+      };
+    }());
+    var child1 = (function() {
+      return {
+        isHTMLBars: true,
+        revision: "Ember@1.11.3",
+        blockParams: 0,
+        cachedFragment: null,
+        hasRendered: false,
+        build: function build(dom) {
+          var el0 = dom.createDocumentFragment();
+          var el1 = dom.createTextNode("<img src=\"img/logo");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createComment("");
+          dom.appendChild(el0, el1);
+          var el1 = dom.createTextNode(".png\" width=\"300\" alt=\"Logo\">\n");
+          dom.appendChild(el0, el1);
+          return el0;
+        },
+        render: function render(context, env, contextualElement) {
+          var dom = env.dom;
+          var hooks = env.hooks, get = hooks.get, inline = hooks.inline;
+          dom.detectNamespace(contextualElement);
+          var fragment;
+          if (env.useFragmentCache && dom.canClone) {
+            if (this.cachedFragment === null) {
+              fragment = this.build(dom);
+              if (this.hasRendered) {
+                this.cachedFragment = fragment;
+              } else {
+                this.hasRendered = true;
+              }
+            }
+            if (this.cachedFragment) {
+              fragment = dom.cloneNode(this.cachedFragment, true);
+            }
+          } else {
+            fragment = this.build(dom);
+          }
+          var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+          inline(env, morph0, context, "if", [get(env, context, "media.retina"), "-2x", ""], {});
+          return fragment;
+        }
+      };
+    }());
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, get = hooks.get, block = hooks.block;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
+        dom.insertBoundary(fragment, null);
+        dom.insertBoundary(fragment, 0);
+        block(env, morph0, context, "if", [get(env, context, "media.medium")], {}, child0, child1);
+        return fragment;
+      }
+    };
+  }());
   return {
     isHTMLBars: true,
     revision: "Ember@1.11.3",
@@ -1187,7 +1357,7 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       var el6 = dom.createTextNode("Example #1");
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
-      var el5 = dom.createTextNode("\n        \n        ");
+      var el5 = dom.createTextNode("\n        ");
       dom.appendChild(el4, el5);
       var el5 = dom.createElement("p");
       var el6 = dom.createTextNode("\n          Retina logo via simple if/else in ");
@@ -1229,6 +1399,26 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n\n        ");
       dom.appendChild(el4, el5);
+      var el5 = dom.createElement("span");
+      dom.setAttribute(el5,"class","label secondary");
+      var el6 = dom.createTextNode("Rendered HTML");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("code");
+      dom.setAttribute(el5,"class","code-block");
+      var el6 = dom.createElement("pre");
+      var el7 = dom.createTextNode("\n<img src=\"img/logo");
+      dom.appendChild(el6, el7);
+      var el7 = dom.createComment("");
+      dom.appendChild(el6, el7);
+      var el7 = dom.createTextNode(".png\" width=\"300\" alt=\"Logo\">\n\n");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n\n        ");
+      dom.appendChild(el4, el5);
       var el5 = dom.createElement("hr");
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n\n        ");
@@ -1237,7 +1427,7 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       var el6 = dom.createTextNode("Example #2");
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
-      var el5 = dom.createTextNode("\n\n        ");
+      var el5 = dom.createTextNode("\n        ");
       dom.appendChild(el4, el5);
       var el5 = dom.createElement("p");
       var el6 = dom.createTextNode("\n          Different logo for small, medium and large screens.\n        ");
@@ -1271,6 +1461,26 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n\n        ");
       dom.appendChild(el4, el5);
+      var el5 = dom.createElement("span");
+      dom.setAttribute(el5,"class","label secondary");
+      var el6 = dom.createTextNode("Rendered HTML");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("code");
+      dom.setAttribute(el5,"class","code-block");
+      var el6 = dom.createElement("pre");
+      var el7 = dom.createTextNode("\n");
+      dom.appendChild(el6, el7);
+      var el7 = dom.createComment("");
+      dom.appendChild(el6, el7);
+      var el7 = dom.createTextNode("\n");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n\n        ");
+      dom.appendChild(el4, el5);
       var el5 = dom.createElement("hr");
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n\n        ");
@@ -1279,7 +1489,7 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       var el6 = dom.createTextNode("Example #3");
       dom.appendChild(el5, el6);
       dom.appendChild(el4, el5);
-      var el5 = dom.createTextNode("\n\n        ");
+      var el5 = dom.createTextNode("\n        ");
       dom.appendChild(el4, el5);
       var el5 = dom.createElement("p");
       var el6 = dom.createTextNode("\n          Same as example #2 but with a responsive image component instead of ");
@@ -1361,17 +1571,21 @@ Ember.TEMPLATES["responsive-images"] = Ember.HTMLBars.template((function() {
       var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
       var morph1 = dom.createMorphAt(dom.childAt(element3, [1]),1,1);
       var attrMorph0 = dom.createAttrMorph(element5, 'src');
-      var morph2 = dom.createMorphAt(dom.childAt(element4, [21]),1,1);
-      var morph3 = dom.createMorphAt(dom.childAt(element4, [33]),1,1);
-      var morph4 = dom.createMorphAt(fragment,4,4,contextualElement);
+      var morph2 = dom.createMorphAt(dom.childAt(element4, [17, 0]),1,1);
+      var morph3 = dom.createMorphAt(dom.childAt(element4, [25]),1,1);
+      var morph4 = dom.createMorphAt(dom.childAt(element4, [33, 0]),1,1);
+      var morph5 = dom.createMorphAt(dom.childAt(element4, [41]),1,1);
+      var morph6 = dom.createMorphAt(fragment,4,4,contextualElement);
       dom.insertBoundary(fragment, null);
       dom.insertBoundary(fragment, 0);
       inline(env, morph0, context, "partial", ["header"], {});
       inline(env, morph1, context, "partial", ["side-nav"], {});
       attribute(env, attrMorph0, element5, "src", concat(env, ["img/logo", subexpr(env, context, "if", [get(env, context, "media.retina"), "-2x", ""], {}), ".png"]));
-      block(env, morph2, context, "if", [get(env, context, "media.small")], {}, child0, child1);
-      inline(env, morph3, context, "responsive-image", [], {"media": get(env, context, "media"), "retina": "-2x", "alt": "Logo", "sizes": "small, medium, largeUp", "srcset": "img/logo-small.png 100w, img/logo-medium.png 200w, img/logo.png 300w"});
-      inline(env, morph4, context, "partial", ["footer"], {});
+      inline(env, morph2, context, "if", [get(env, context, "media.retina"), "-2x", ""], {});
+      block(env, morph3, context, "if", [get(env, context, "media.small")], {}, child0, child1);
+      block(env, morph4, context, "if", [get(env, context, "media.small")], {}, child2, child3);
+      inline(env, morph5, context, "responsive-image", [], {"media": get(env, context, "media"), "retina": "-2x", "alt": "Logo", "sizes": "small, medium, largeUp", "srcset": "img/logo-small.png 100w, img/logo-medium.png 200w, img/logo.png 300w"});
+      inline(env, morph6, context, "partial", ["footer"], {});
       return fragment;
     }
   };
@@ -2044,6 +2258,198 @@ Ember.TEMPLATES["statuses"] = Ember.HTMLBars.template((function() {
   };
 }()));
 Ember.TEMPLATES["tricky-layout"] = Ember.HTMLBars.template((function() {
+  var child0 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("    ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("span");
+        dom.setAttribute(el1,"class","icon back");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        return fragment;
+      }
+    };
+  }());
+  var child1 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("    ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","large-4 columns tricky-layout-sidebar");
+        var el2 = dom.createTextNode("\n      ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n    ");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, inline = hooks.inline;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [1]),1,1);
+        inline(env, morph0, context, "partial", ["tricky-layout/blog-title"], {});
+        return fragment;
+      }
+    };
+  }());
+  var child2 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 0,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("      ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("div");
+        dom.setAttribute(el1,"class","row collapse");
+        var el2 = dom.createTextNode("\n        ");
+        dom.appendChild(el1, el2);
+        var el2 = dom.createElement("div");
+        dom.setAttribute(el2,"class","column");
+        var el3 = dom.createTextNode("\n          ");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createComment("");
+        dom.appendChild(el2, el3);
+        var el3 = dom.createTextNode("\n        ");
+        dom.appendChild(el2, el3);
+        dom.appendChild(el1, el2);
+        var el2 = dom.createTextNode("\n      ");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement) {
+        var dom = env.dom;
+        var hooks = env.hooks, inline = hooks.inline;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(dom.childAt(fragment, [1, 1]),1,1);
+        inline(env, morph0, context, "partial", ["tricky-layout/blog-title"], {});
+        return fragment;
+      }
+    };
+  }());
+  var child3 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 1,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("      ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createComment("");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement, blockArguments) {
+        var dom = env.dom;
+        var hooks = env.hooks, set = hooks.set, inline = hooks.inline;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var morph0 = dom.createMorphAt(fragment,1,1,contextualElement);
+        set(env, context, "post", blockArguments[0]);
+        inline(env, morph0, context, "partial", ["tricky-layout/post"], {});
+        return fragment;
+      }
+    };
+  }());
   return {
     isHTMLBars: true,
     revision: "Ember@1.11.3",
@@ -2052,47 +2458,30 @@ Ember.TEMPLATES["tricky-layout"] = Ember.HTMLBars.template((function() {
     hasRendered: false,
     build: function build(dom) {
       var el0 = dom.createDocumentFragment();
-      var el1 = dom.createComment("");
-      dom.appendChild(el0, el1);
-      var el1 = dom.createTextNode("\n\n");
-      dom.appendChild(el0, el1);
       var el1 = dom.createElement("main");
-      dom.setAttribute(el1,"class","row");
+      dom.setAttribute(el1,"class","row collapse");
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createComment("");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("      \n");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createComment("");
+      dom.appendChild(el1, el2);
       var el2 = dom.createTextNode("\n  ");
       dom.appendChild(el1, el2);
       var el2 = dom.createElement("div");
-      dom.setAttribute(el2,"class","large-3 columns");
       var el3 = dom.createTextNode("\n    ");
       dom.appendChild(el2, el3);
-      var el3 = dom.createComment("");
-      dom.appendChild(el2, el3);
-      var el3 = dom.createTextNode("\n  ");
-      dom.appendChild(el2, el3);
-      dom.appendChild(el1, el2);
-      var el2 = dom.createTextNode("\n\n  ");
-      dom.appendChild(el1, el2);
-      var el2 = dom.createElement("div");
-      dom.setAttribute(el2,"class","large-13 columns");
-      var el3 = dom.createTextNode(" \n    ");
-      dom.appendChild(el2, el3);
-      var el3 = dom.createElement("section");
-      dom.setAttribute(el3,"class","row");
+      var el3 = dom.createElement("div");
+      dom.setAttribute(el3,"class","row collapse");
       var el4 = dom.createTextNode("\n      ");
       dom.appendChild(el3, el4);
       var el4 = dom.createElement("div");
       dom.setAttribute(el4,"class","column");
       var el5 = dom.createTextNode("\n        ");
       dom.appendChild(el4, el5);
-      var el5 = dom.createElement("h1");
-      dom.setAttribute(el5,"class","h3");
-      var el6 = dom.createTextNode("Tricky Layout");
-      dom.appendChild(el5, el6);
-      dom.appendChild(el4, el5);
-      var el5 = dom.createTextNode("\n\n        ");
-      dom.appendChild(el4, el5);
-      var el5 = dom.createElement("p");
-      var el6 = dom.createTextNode("\n          TODO: Create a sample blog with a tricky layout. Maybe one with an ad on top, then the\n          logo/menu, followed by posts, where the logo/menu section moves to the left on larger\n          screens.\n        ");
-      dom.appendChild(el5, el6);
+      var el5 = dom.createComment("");
       dom.appendChild(el4, el5);
       var el5 = dom.createTextNode("\n      ");
       dom.appendChild(el4, el5);
@@ -2100,21 +2489,29 @@ Ember.TEMPLATES["tricky-layout"] = Ember.HTMLBars.template((function() {
       var el4 = dom.createTextNode("\n    ");
       dom.appendChild(el3, el4);
       dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createComment("");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createComment("");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createComment("");
+      dom.appendChild(el2, el3);
       var el3 = dom.createTextNode("\n  ");
       dom.appendChild(el2, el3);
       dom.appendChild(el1, el2);
       var el2 = dom.createTextNode("\n");
       dom.appendChild(el1, el2);
       dom.appendChild(el0, el1);
-      var el1 = dom.createTextNode("\n\n");
-      dom.appendChild(el0, el1);
-      var el1 = dom.createComment("");
-      dom.appendChild(el0, el1);
       return el0;
     },
     render: function render(context, env, contextualElement) {
       var dom = env.dom;
-      var hooks = env.hooks, inline = hooks.inline;
+      var hooks = env.hooks, block = hooks.block, get = hooks.get, subexpr = hooks.subexpr, concat = hooks.concat, attribute = hooks.attribute, inline = hooks.inline;
       dom.detectNamespace(contextualElement);
       var fragment;
       if (env.useFragmentCache && dom.canClone) {
@@ -2132,14 +2529,22 @@ Ember.TEMPLATES["tricky-layout"] = Ember.HTMLBars.template((function() {
       } else {
         fragment = this.build(dom);
       }
-      var morph0 = dom.createMorphAt(fragment,0,0,contextualElement);
-      var morph1 = dom.createMorphAt(dom.childAt(fragment, [2, 1]),1,1);
-      var morph2 = dom.createMorphAt(fragment,4,4,contextualElement);
-      dom.insertBoundary(fragment, null);
-      dom.insertBoundary(fragment, 0);
-      inline(env, morph0, context, "partial", ["header"], {});
-      inline(env, morph1, context, "partial", ["side-nav"], {});
-      inline(env, morph2, context, "partial", ["footer"], {});
+      var element0 = dom.childAt(fragment, [0]);
+      var element1 = dom.childAt(element0, [5]);
+      var morph0 = dom.createMorphAt(element0,1,1);
+      var morph1 = dom.createMorphAt(element0,3,3);
+      var attrMorph0 = dom.createAttrMorph(element1, 'class');
+      var morph2 = dom.createMorphAt(dom.childAt(element1, [1, 1]),1,1);
+      var morph3 = dom.createMorphAt(element1,3,3);
+      var morph4 = dom.createMorphAt(element1,5,5);
+      var morph5 = dom.createMorphAt(element1,7,7);
+      block(env, morph0, context, "link-to", ["index"], {"class": "tricky-home-link text-center", "title": "Back to home page"}, child0, null);
+      block(env, morph1, context, "if", [get(env, context, "media.largeUp")], {}, child1, null);
+      attribute(env, attrMorph0, element1, "class", concat(env, [subexpr(env, context, "if", [get(env, context, "media.largeUp"), "large-12", ""], {}), " columns"]));
+      inline(env, morph2, context, "partial", ["tricky-layout/ad"], {});
+      block(env, morph3, context, "unless", [get(env, context, "media.largeUp")], {}, child2, null);
+      block(env, morph4, context, "each", [get(env, context, "model")], {}, child3, null);
+      inline(env, morph5, context, "partial", ["footer"], {});
       return fragment;
     }
   };
@@ -2174,6 +2579,329 @@ Ember.TEMPLATES["components/responsive-image"] = Ember.HTMLBars.template((functi
       } else {
         fragment = this.build(dom);
       }
+      return fragment;
+    }
+  };
+}()));
+Ember.TEMPLATES["tricky-layout/_ad"] = Ember.HTMLBars.template((function() {
+  return {
+    isHTMLBars: true,
+    revision: "Ember@1.11.3",
+    blockParams: 0,
+    cachedFragment: null,
+    hasRendered: false,
+    build: function build(dom) {
+      var el0 = dom.createDocumentFragment();
+      var el1 = dom.createElement("article");
+      dom.setAttribute(el1,"class","tricky-ad");
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("h3");
+      dom.setAttribute(el2,"class","tricky-ad-heading");
+      var el3 = dom.createTextNode("Your Download is Ready");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("h3");
+      dom.setAttribute(el2,"class","h1 tricky-ad-large-heading");
+      var el3 = dom.createTextNode("This is an ad");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("button");
+      dom.setAttribute(el2,"class","large radius");
+      var el3 = dom.createTextNode("Download");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      return el0;
+    },
+    render: function render(context, env, contextualElement) {
+      var dom = env.dom;
+      dom.detectNamespace(contextualElement);
+      var fragment;
+      if (env.useFragmentCache && dom.canClone) {
+        if (this.cachedFragment === null) {
+          fragment = this.build(dom);
+          if (this.hasRendered) {
+            this.cachedFragment = fragment;
+          } else {
+            this.hasRendered = true;
+          }
+        }
+        if (this.cachedFragment) {
+          fragment = dom.cloneNode(this.cachedFragment, true);
+        }
+      } else {
+        fragment = this.build(dom);
+      }
+      return fragment;
+    }
+  };
+}()));
+Ember.TEMPLATES["tricky-layout/_blog-title"] = Ember.HTMLBars.template((function() {
+  return {
+    isHTMLBars: true,
+    revision: "Ember@1.11.3",
+    blockParams: 0,
+    cachedFragment: null,
+    hasRendered: false,
+    build: function build(dom) {
+      var el0 = dom.createDocumentFragment();
+      var el1 = dom.createElement("div");
+      dom.setAttribute(el1,"class","tricky-blog-header");
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("h1");
+      dom.setAttribute(el2,"class","tricky-blog-heading");
+      var el3 = dom.createTextNode("A Tricky Blog");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("h2");
+      dom.setAttribute(el2,"class","tricky-blog-subheading");
+      var el3 = dom.createTextNode("This is a blog about nothing");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      return el0;
+    },
+    render: function render(context, env, contextualElement) {
+      var dom = env.dom;
+      dom.detectNamespace(contextualElement);
+      var fragment;
+      if (env.useFragmentCache && dom.canClone) {
+        if (this.cachedFragment === null) {
+          fragment = this.build(dom);
+          if (this.hasRendered) {
+            this.cachedFragment = fragment;
+          } else {
+            this.hasRendered = true;
+          }
+        }
+        if (this.cachedFragment) {
+          fragment = dom.cloneNode(this.cachedFragment, true);
+        }
+      } else {
+        fragment = this.build(dom);
+      }
+      return fragment;
+    }
+  };
+}()));
+Ember.TEMPLATES["tricky-layout/_post"] = Ember.HTMLBars.template((function() {
+  var child0 = (function() {
+    return {
+      isHTMLBars: true,
+      revision: "Ember@1.11.3",
+      blockParams: 1,
+      cachedFragment: null,
+      hasRendered: false,
+      build: function build(dom) {
+        var el0 = dom.createDocumentFragment();
+        var el1 = dom.createTextNode("            ");
+        dom.appendChild(el0, el1);
+        var el1 = dom.createElement("span");
+        var el2 = dom.createComment("");
+        dom.appendChild(el1, el2);
+        dom.appendChild(el0, el1);
+        var el1 = dom.createTextNode("\n");
+        dom.appendChild(el0, el1);
+        return el0;
+      },
+      render: function render(context, env, contextualElement, blockArguments) {
+        var dom = env.dom;
+        var hooks = env.hooks, set = hooks.set, get = hooks.get, concat = hooks.concat, attribute = hooks.attribute, content = hooks.content;
+        dom.detectNamespace(contextualElement);
+        var fragment;
+        if (env.useFragmentCache && dom.canClone) {
+          if (this.cachedFragment === null) {
+            fragment = this.build(dom);
+            if (this.hasRendered) {
+              this.cachedFragment = fragment;
+            } else {
+              this.hasRendered = true;
+            }
+          }
+          if (this.cachedFragment) {
+            fragment = dom.cloneNode(this.cachedFragment, true);
+          }
+        } else {
+          fragment = this.build(dom);
+        }
+        var element0 = dom.childAt(fragment, [1]);
+        var morph0 = dom.createMorphAt(element0,0,0);
+        var attrMorph0 = dom.createAttrMorph(element0, 'class');
+        set(env, context, "label", blockArguments[0]);
+        attribute(env, attrMorph0, element0, "class", concat(env, ["label radius ", get(env, context, "label.className")]));
+        content(env, morph0, context, "label.name");
+        return fragment;
+      }
+    };
+  }());
+  return {
+    isHTMLBars: true,
+    revision: "Ember@1.11.3",
+    blockParams: 0,
+    cachedFragment: null,
+    hasRendered: false,
+    build: function build(dom) {
+      var el0 = dom.createDocumentFragment();
+      var el1 = dom.createElement("article");
+      dom.setAttribute(el1,"class","row tricky-post");
+      var el2 = dom.createTextNode("\n  ");
+      dom.appendChild(el1, el2);
+      var el2 = dom.createElement("div");
+      dom.setAttribute(el2,"class","column");
+      var el3 = dom.createTextNode("\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("header");
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("div");
+      dom.setAttribute(el4,"class","row");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("div");
+      dom.setAttribute(el5,"class","small-12 medium-14 columns");
+      var el6 = dom.createTextNode("\n          ");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createElement("h3");
+      var el7 = dom.createComment("");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode("\n        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("div");
+      dom.setAttribute(el5,"class","small-4 medium-2 columns text-right");
+      var el6 = dom.createTextNode("\n          ");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createElement("img");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode("\n        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("div");
+      dom.setAttribute(el4,"class","row");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("div");
+      dom.setAttribute(el5,"class","column");
+      var el6 = dom.createTextNode("\n          By ");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createElement("a");
+      var el7 = dom.createComment("");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode(" in\n");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createComment("");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode("        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n\n    ");
+      dom.appendChild(el2, el3);
+      var el3 = dom.createElement("section");
+      dom.setAttribute(el3,"class","tricky-post-content");
+      var el4 = dom.createTextNode("\n      ");
+      dom.appendChild(el3, el4);
+      var el4 = dom.createElement("div");
+      dom.setAttribute(el4,"class","row");
+      var el5 = dom.createTextNode("\n        ");
+      dom.appendChild(el4, el5);
+      var el5 = dom.createElement("div");
+      dom.setAttribute(el5,"class","column");
+      var el6 = dom.createTextNode("\n          ");
+      dom.appendChild(el5, el6);
+      var el6 = dom.createElement("p");
+      var el7 = dom.createTextNode("\n            ");
+      dom.appendChild(el6, el7);
+      var el7 = dom.createComment("");
+      dom.appendChild(el6, el7);
+      var el7 = dom.createTextNode("\n          ");
+      dom.appendChild(el6, el7);
+      dom.appendChild(el5, el6);
+      var el6 = dom.createTextNode("\n        ");
+      dom.appendChild(el5, el6);
+      dom.appendChild(el4, el5);
+      var el5 = dom.createTextNode("\n      ");
+      dom.appendChild(el4, el5);
+      dom.appendChild(el3, el4);
+      var el4 = dom.createTextNode("\n    ");
+      dom.appendChild(el3, el4);
+      dom.appendChild(el2, el3);
+      var el3 = dom.createTextNode("\n  ");
+      dom.appendChild(el2, el3);
+      dom.appendChild(el1, el2);
+      var el2 = dom.createTextNode("\n");
+      dom.appendChild(el1, el2);
+      dom.appendChild(el0, el1);
+      return el0;
+    },
+    render: function render(context, env, contextualElement) {
+      var dom = env.dom;
+      var hooks = env.hooks, content = hooks.content, get = hooks.get, subexpr = hooks.subexpr, concat = hooks.concat, attribute = hooks.attribute, block = hooks.block;
+      dom.detectNamespace(contextualElement);
+      var fragment;
+      if (env.useFragmentCache && dom.canClone) {
+        if (this.cachedFragment === null) {
+          fragment = this.build(dom);
+          if (this.hasRendered) {
+            this.cachedFragment = fragment;
+          } else {
+            this.hasRendered = true;
+          }
+        }
+        if (this.cachedFragment) {
+          fragment = dom.cloneNode(this.cachedFragment, true);
+        }
+      } else {
+        fragment = this.build(dom);
+      }
+      var element1 = dom.childAt(fragment, [0, 1]);
+      var element2 = dom.childAt(element1, [1]);
+      var element3 = dom.childAt(element2, [1]);
+      var element4 = dom.childAt(element3, [3, 1]);
+      var element5 = dom.childAt(element2, [3, 1]);
+      var element6 = dom.childAt(element5, [1]);
+      var morph0 = dom.createUnsafeMorphAt(dom.childAt(element3, [1, 1]),0,0);
+      var attrMorph0 = dom.createAttrMorph(element4, 'src');
+      var attrMorph1 = dom.createAttrMorph(element4, 'alt');
+      var morph1 = dom.createMorphAt(element6,0,0);
+      var attrMorph2 = dom.createAttrMorph(element6, 'href');
+      var attrMorph3 = dom.createAttrMorph(element6, 'title');
+      var morph2 = dom.createMorphAt(element5,3,3);
+      var morph3 = dom.createUnsafeMorphAt(dom.childAt(element1, [3, 1, 1, 1]),1,1);
+      content(env, morph0, context, "post.title");
+      attribute(env, attrMorph0, element4, "src", concat(env, ["img/authors/", get(env, context, "post.author.image"), subexpr(env, context, "if", [get(env, context, "media.retina"), "-2x", ""], {}), ".png"]));
+      attribute(env, attrMorph1, element4, "alt", concat(env, ["Image of ", get(env, context, "post.author.name")]));
+      attribute(env, attrMorph2, element6, "href", concat(env, ["mailto:", get(env, context, "post.author.email"), "?subject=RE: ", get(env, context, "post.title")]));
+      attribute(env, attrMorph3, element6, "title", concat(env, ["File your complaints with ", get(env, context, "post.author.name")]));
+      content(env, morph1, context, "post.author.name");
+      block(env, morph2, context, "each", [get(env, context, "post.labels")], {}, child0, null);
+      content(env, morph3, context, "post.excerpt");
       return fragment;
     }
   };

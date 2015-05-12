@@ -1,23 +1,33 @@
-{{partial "header"}}
+<main class="row collapse">
+  {{#link-to "index" class="tricky-home-link text-center" title="Back to home page"}}
+    <span class="icon back"></span>
+  {{/link-to}}
+      
+  {{#if media.largeUp}}
+    <div class="large-4 columns tricky-layout-sidebar">
+      {{partial "tricky-layout/blog-title"}}
+    </div>
+  {{/if}}
 
-<main class="row">
-  <div class="large-3 columns">
-    {{partial "side-nav"}}
-  </div>
-
-  <div class="large-13 columns"> 
-    <section class="row">
+  <div class="{{if media.largeUp 'large-12' ''}} columns">
+    <div class="row collapse">
       <div class="column">
-        <h1 class="h3">Tricky Layout</h1>
-
-        <p>
-          TODO: Create a sample blog with a tricky layout. Maybe one with an ad on top, then the
-          logo/menu, followed by posts, where the logo/menu section moves to the left on larger
-          screens.
-        </p>
+        {{partial "tricky-layout/ad"}}
       </div>
-    </section>
+    </div>
+
+    {{#unless media.largeUp}}
+      <div class="row collapse">
+        <div class="column">
+          {{partial "tricky-layout/blog-title"}}
+        </div>
+      </div>
+    {{/unless}}
+
+    {{#each model as |post|}}
+      {{partial "tricky-layout/post"}}
+    {{/each}}
+
+    {{partial "footer"}}
   </div>
 </main>
-
-{{partial "footer"}}

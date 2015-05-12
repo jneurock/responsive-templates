@@ -17,7 +17,6 @@
         </p>
 
         <h5>Example #1</h5>
-        
         <p>
           Retina logo via simple if/else in <code>src</code> attribute.
         </p>
@@ -32,10 +31,15 @@
 
 </pre></code>
 
+        <span class="label secondary">Rendered HTML</span>
+<code class="code-block"><pre>
+&lt;img src="img/logo{{if media.retina '-2x' ''}}.png" width="300" alt="Logo"&gt;
+
+</pre></code>
+
         <hr>
 
         <h5>Example #2</h5>
-
         <p>
           Different logo for small, medium and large screens.
         </p>
@@ -62,10 +66,21 @@
 
 </pre></code>
 
+        <span class="label secondary">Rendered HTML</span>
+<code class="code-block"><pre>
+{{#if media.small}}
+&lt;img src="img/logo-small{{if media.retina '-2x' ''}}.png" width="100" alt="Logo"&gt;
+{{else if media.medium}}
+&lt;img src="img/logo-medium{{if media.retina '-2x' ''}}.png" width="200" alt="Logo"&gt;
+{{else}}
+&lt;img src="img/logo{{if media.retina '-2x' ''}}.png" width="300" alt="Logo"&gt;
+{{/if}}
+
+</pre></code>
+
         <hr>
 
         <h5>Example #3</h5>
-
         <p>
           Same as example #2 but with a responsive image component instead of <code>if/else</code>
           blocks.
