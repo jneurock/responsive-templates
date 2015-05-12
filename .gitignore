@@ -28,3 +28,7 @@ bower_components/
 # node.js modules #
 ###################
 node_modules/
+
+# Compiled Handlebars #
+#######################
+js/templates.js
