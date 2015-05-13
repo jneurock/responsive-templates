@@ -1,8 +1,15 @@
 <div class="row tricky-code">
   <div class="column">
+    <p>
+      In this example, a blog has ad space reserved at the top. For larger screens, the desire is
+      to show the blog title fixed on the left, spanning the height of the window. For small to
+      medium-sized screens, the blog title should appear above the posts but below the ad space.
+    </p>
+
     <span class="label secondary">Handlebars</span>
 <code class="code-block"><pre>
-&#123;&#123;#if media.largeUp}}
+&#123;&#123;! Show the blog title on the left for larger screens &#125;&#125;
+&#123;&#123;#if media.largeUp&#125;&#125;
   &lt;div class="large-4 columns tricky-layout-sidebar"&gt;
     &#123;&#123;partial "tricky-layout/blog-title"}}
   &lt;/div&gt;
@@ -15,6 +22,7 @@
     &lt;/div&gt;
   &lt;/div&gt;
 
+  &#123;&#123;! Show the blog title above the posts for small to medium screens &#125;&#125;
   &#123;&#123;#unless media.largeUp&#125;&#125;
     &lt;div class="row collapse"&gt;
       &lt;div class="column"&gt;
@@ -31,5 +39,13 @@
 &lt;/div&gt;
 
 </pre></code>
+
+    <p>
+      In the code above, you can see the blog title partial is rendered in different places
+      depending on the screen size. The same effect can certainly be achieved with CSS alone. It could
+      also be done by having jQuery move the blog title around. These are somewhat complex and hard
+      to follow methods of acheiving the same thing and with the CSS-only method, you would need
+      to render the blog title twice and hide/show the appropriate one.
+    </p>
   </div>
 </div>

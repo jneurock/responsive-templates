@@ -18,6 +18,7 @@
   {{#if showCode}}
     {{partial "tricky-layout/code"}}
   {{else}}
+    {{! Show the blog title on the left for larger screens }}
     {{#if media.largeUp}}
       <div class="large-4 columns tricky-layout-sidebar">
         {{partial "tricky-layout/blog-title"}}
@@ -31,6 +32,7 @@
         </div>
       </div>
 
+      {{! Show the blog title above the posts for small to medium screens }}
       {{#unless media.largeUp}}
         <div class="row collapse">
           <div class="column">
